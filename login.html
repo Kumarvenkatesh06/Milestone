@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      min-height: 100vh;
+      overflow-y: auto; /* Enables scrolling */
+      font-family: Arial, sans-serif;
+    }
+
+    iframe.background-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+      border: none;
+    }
+
+    .container {
+      align-items: center;
+      max-width: 1px;
+      min-width: 350px;
+      margin: 50px auto;
+      background: rgba(255, 255, 255, 0.8);
+      color: #000;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    select,
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #00bfff;
+      color: #000;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #1e90ff;
+    }
+
+    h5 {
+      margin: 20px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .cont {
+      position: absolute;
+      top: 0%;
+      left: 43%;
+      justify-content: center;
+      text-align: center;
+      padding: 0%;
+      margin: 0;
+    }
+
+    .cont h1 {
+      position: absolute;
+      color: white;
+      top: 0px;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 10px 20px;
+      border-radius: 8px;
+      text-align: center;
+      z-index: 2;
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+  </style>
+  <body>
+    <div class="cont">
+      <h1>Milestone</h1>
+    </div>
+    <br />
+    <div class="container">
+      <h1><i class="fa-solid fa-user"></i></h1>
+      <h5>Login</h5>
+      <div class="text-box">
+        <div class="form-container">
+          <div class="form-group">
+            <form id="loginForm">
+              <label>Username</label>
+              <input type="text" placeholder="Enter Username" /> <br /><br />
+              <label>Password</label>
+              <input type="password" placeholder="Enter Password" />
+              <br /><br />
+              <a class="forget" href="fpswd.html">Forgot Password?</a>
+            </form>
+          </div>
+        </div>
+        <br />
+        <a href="home.html"><button>Login</button></a>
+      </div>
+      <div class="SignIn">
+        Don't Have An Account?
+        <a href="reg.html"><button>SignIn</button></a>
+      </div>
+      <div
+        style="
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: -1;
+          border: 0%;
+        "
+      >
+        <iframe
+          src="https://giphy.com/embed/xTiTnxpQ3ghPiB2Hp6"
+          width="100v2"
+          height="100vh"
+          style="
+            position: fixed;
+            z-index: -1;
+            width: 100%;
+            background-size: cover;
+            height: 100%;
+            object-fit: cover;
+            overflow: hidden;
+          "
+          frameborder="0"
+          class="giphy-embed"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </div>
+  </body>
+</html>
