@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homepage</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    .career-options {
+      margin: 20px 0;
+      font-size: medium;
+    }
+    button {
+      background-color: #3bba9c;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+  <body>
+    <div class="leftpanel hidden" id="left">
+      <button type="submit" id="close">&times;</button> <br /><br />
+      <div class="cont">
+        <div class="profile">
+          <i class="fa-solid fa-user"></i>
+        </div>
+        <br />
+        <a class="anchor1" href=""> View Profile </a>
+      </div>
+      <ul class="list">
+        <li>
+          <a class="anchor" href="">
+            <i class="fa-solid fa-graduation-cap"></i> MY LEARNING
+          </a>
+        </li>
+        <li>
+          <a class="anchor" href="">
+            <i class="fa-solid fa-certificate"></i> VIEW CERTIFICATES
+          </a>
+        </li>
+        <li>
+          <a class="anchor" href="">
+            <i class="fa-solid fa-square-check"></i> TRACK PROGRESS
+          </a>
+        </li>
+        <li>
+          <a class="anchor" href=""
+            ><i class="fa-regular fa-user"></i>MY ACCOUNT</a
+          >
+        </li>
+        <li>
+          <a class="anchor" href="set.html"
+            ><i class="fa-solid fa-gear"></i> SETTINGS</a
+          >
+        </li>
+        <li>
+          <a class="anchor" href="" id="bottom">
+            <i class="fa-solid fa-circle-question"></i> HELP AND SUPPORT
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="home">
+      <h1 class="wel">Welcome To Milestone</h1>
+      <div class="bar">
+        <button type="submit" id="showpanel">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div class="search">
+      <button type="submit">
+        <i class="fa-solid fa-search"></i>
+      </button>
+      <input type="text" placeholder="Search Here" />
+    </div>
+    <div class="popup-container" style="display: none">
+      <div class="popup-content">
+        <button class="popup-close">&times;</button>
+        <div class="welcome">
+          <h1>Welcome, <span id="username-display">Guest</span>!</h1>
+        </div>
+        <div class="goal">
+          <label
+            >What do you aspire to become after completing your engineering
+            degree?</label
+          >
+          <br /><br />
+          <select>
+            <option value="software-developer">Software Developer</option>
+            <option value="data-analyst">Data Analyst</option>
+            <option value="ai-ml-specialist">AI/ML Specialist</option>
+            <option value="web-developer">Web Developer</option>
+            <option value="mobile-app-developer">Mobile App Developer</option>
+            <option value="cloud-engineer">Cloud Engineer</option>
+            <option value="cybersecurity-analyst">Cybersecurity Analyst</option>
+            <option value="system-administrator">System Administrator</option>
+            <option value="network-engineer">Network Engineer</option>
+            <option value="database-administrator">
+              Database Administrator
+            </option>
+            <option value="hardware-engineer">Hardware Engineer</option>
+            <option value="electrical-engineer">Electrical Engineer</option>
+            <option value="civil-engineer">Civil Engineer</option>
+            <option value="mechanical-engineer">Mechanical Engineer</option>
+            <option value="automobile-engineer">Automobile Engineer</option>
+            <option value="biomedical-engineer">Biomedical Engineer</option>
+            <option value="chemical-engineer">Chemical Engineer</option>
+            <option value="industrial-engineer">Industrial Engineer</option>
+            <option value="architect">Architect</option>
+            <option value="product-designer">Product Designer</option>
+            <option value="quality-analyst">Quality Analyst (QA)</option>
+            <option value="business-analyst">Business Analyst</option>
+            <option value="project-manager">Project Manager</option>
+            <option value="consultant">Technical Consultant</option>
+            <option value="research-scientist">Research Scientist</option>
+            <option value="entrepreneur">Entrepreneur</option>
+            <option value="management">
+              Management (MBA, Marketing, HR, etc.)
+            </option>
+            <option value="teacher-professor">Teacher/Professor</option>
+            <option value="government-jobs">
+              Government Jobs (UPSC, PSUs, etc.)
+            </option>
+            <option value="higher-studies">
+              Higher Studies (M.Tech, MS, PhD)
+            </option>
+            <option value="startup-founder">Startup Founder</option>
+            <option value="sales-engineer">Sales Engineer</option>
+            <option value="supply-chain-manager">Supply Chain Manager</option>
+            <option value="logistics-manager">Logistics Manager</option>
+            <option value="hr-specialist">HR Specialist</option>
+            <option value="finance-analyst">Finance Analyst</option>
+            <option value="data-scientist">Data Scientist</option>
+            <option value="game-developer">Game Developer</option>
+            <option value="software-architect">Software Architect</option>
+            <option value="devops-engineer">DevOps Engineer</option>
+            <option value="research-and-development">R&D Specialist</option>
+            <option value="production-engineer">Production Engineer</option>
+            <option value="testing-engineer">Testing Engineer</option>
+            <option value="content-developer">Content Developer</option>
+            <option value="seo-specialist">SEO Specialist</option>
+            <option value="marketing-manager">Marketing Manager</option>
+            <option value="user-experience-designer">UX Designer</option>
+            <option value="user-interface-designer">UI Designer</option>
+            <option value="product-manager">Product Manager</option>
+            <option value="business-development-manager">
+              Business Development Manager
+            </option>
+            <option value="public-relations">Public Relations Officer</option>
+            <option value="event-manager">Event Manager</option>
+            <option value="graphic-designer">Graphic Designer</option>
+            <option value="media-planner">Media Planner</option>
+            <option value="advertising-manager">Advertising Manager</option>
+            <option value="tourism-manager">Tourism Manager</option>
+            <option value="logistics-engineer">Logistics Engineer</option>
+            <option value="telecommunications-engineer">
+              Telecommunications Engineer
+            </option>
+            <option value="environmental-engineer">
+              Environmental Engineer
+            </option>
+            <option value="material-science-engineer">
+              Material Science Engineer
+            </option>
+            <option value="energy-manager">Energy Manager</option>
+          </select>
+          <br /><br />
+          <a href="skills.html"
+            ><button onclick="submitChoice()">Submit</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("showpanel").addEventListener("click", () => {
+        document.getElementById("left").classList.remove("hidden");
+      });
+
+      document.getElementById("close").addEventListener("click", () => {
+        document.getElementById("left").classList.add("hidden");
+      });
+
+      const modal = document.getElementById("left");
+      const leftPanel = document.querySelector(".leftpanel");
+      const showPanel = document.querySelector("#showpanel");
+
+      showPanel.addEventListener("click", () => {
+        leftPanel.classList.remove("hidden");
+      });
+
+      document.addEventListener("click", (event) => {
+        const ClickInside = leftPanel.contains(event.target);
+        const ClickOn = showPanel.contains(event.target);
+
+        if (!ClickInside && !ClickOn) {
+          leftPanel.classList.add("hidden");
+        }
+      });
+
+      function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+      }
+
+      const username = getQueryParam("username");
+      if (username) {
+        document.getElementById("username-display").textContent =
+          decodeURIComponent(username);
+      }
+
+      function submitChoice() {
+        const selectedCareer = document.getElementById("career-path").value;
+        const careerText =
+          document.getElementById("career-path").options[
+            document.getElementById("career-path").selectedIndex
+          ].text;
+        document.getElementById(
+          "result"
+        ).innerText = `You have selected: ${careerText}`;
+      }
+    </script>
+    <script src="homescript.js"></script>
+  </body>
+</html>
