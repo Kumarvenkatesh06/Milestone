@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Certificates</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="home">
+      <h1 class="wel">Your Certificates</h1>
+    </div>
+    <div class="container">
+      <section class="certificate-list">
+        {% if certificates %}
+
+        <ul>
+          {% for cert in certificates %}
+          <hr />
+          <h3>{{ cert.courseName }}</h3>
+          <p>Completed on: {{ cert.completionDate }}</p>
+          <a
+            href="{{ url_for('uploaded_file', filename=cert.file_url) }}"
+            target="_blank"
+          >
+            <button>View Certificate</button>
+          </a>
+          <a
+            href="{{ url_for('uploaded_file', filename=cert.file_url) }}"
+            download
+          >
+            <button>Download</button>
+          </a>
+          <hr />
+          {% endfor %}
+        </ul>
+        {% else %}
+        <p style="font-family: Verdana, Geneva, Tahoma, sans-serif; size: 60px">
+          No certificates uploaded yet.
+        </p>
+        {% endif %}
+      </section>
+    </div>
+    <div class="back">
+      <a class="hi" href="/certificate"
+        ><i class="fa-solid fa-circle-arrow-left"></i
+      ></a>
+    </div>
+  </body>
+</html>

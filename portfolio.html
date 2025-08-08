@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 5px;
+      }
+      .portfolio-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .profile-section {
+        margin-bottom: 30px;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      .profile-section h2 {
+        margin: 0;
+      }
+      .courses-section h3,
+      .certifications-section h3 {
+        margin-top: 0;
+      }
+      .course-item,
+      .certification-item {
+        margin-bottom: 15px;
+      }
+      .course-item h4,
+      .certification-item h4 {
+        margin: 0;
+      }
+      .certification-item a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .certification-item a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <h1 class="wel">Your Portfolio</h1>
+    </div>
+    <div class="portfolio-container">
+      <br /><br />
+      <!-- Profile Section -->
+      <div class="profile-section">
+        <h2>{{ student.name }}</h2>
+        <p>Email: {{ student.email }}</p>
+        <p>Date Of Birth: {{ student.dob }}</p>
+        <p>Country: {{ student.country }}</p>
+        <p>College: {{ student.college }}</p>
+        <p>Year Of Pass: {{ student.yop }}</p>
+        <p>Career Goal: {{ student.career }}</p>
+      </div>
+
+      <!-- Completed Courses Section -->
+      <div class="container">
+        <section class="completed-courses">
+          <h2>Completed Courses</h2>
+          {% if completed_courses %}
+          <ul>
+            {% for course in completed_courses %}
+            <li>
+              <strong>{{ course.course_name }}</strong><br />
+              <em>Completed on: {{ course.completion_date }}</em><br />
+            </li>
+            {% endfor %}
+          </ul>
+          {% else %}
+          <p>No completed courses yet.</p>
+          {% endif %}
+        </section>
+      </div>
+      <div class="back">
+        <a class="hi" href="/home"
+          ><i class="fa-solid fa-circle-arrow-left"></i
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

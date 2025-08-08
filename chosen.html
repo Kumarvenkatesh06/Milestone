@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chosen Career</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="home">
+      <h1 class="wel">Your Career</h1>
+    </div>
+    <div class="back">
+      <a class="hi" href="/home"
+        ><i class="fa-solid fa-circle-arrow-left"></i
+      ></a>
+    </div>
+    <div class="container">
+      <h1>Your Chosen Career</h1>
+      {% if career %}
+      <p>
+        You have selected <strong>{{ career }}</strong> as your career option.
+      </p>
+      {% else %}
+      <p>You have not selected a career yet. Please choose one.</p>
+      <a href="/career"><button>Choose Career</button></a>
+      {% endif %}
+      <a href="/skills"><button type="submit">View Skills</button></a>
+    </div>
+  </body>
+</html>

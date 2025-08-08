@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Learning</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .progress-container {
+        width: 80%;
+        margin: 20px auto;
+      }
+
+      .progress-bar {
+        background-color: #f3f3f3;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        height: 30px;
+        width: 100%;
+        padding: 5px;
+      }
+      .progress-bar-fill {
+        background-color: #4caf50;
+        height: 100%;
+        border-radius: 5px;
+        width: 0%;
+        text-align: center;
+        color: black;
+        line-height: 30px;
+      }
+      .course {
+        margin-bottom: 20px;
+      }
+      .course-title {
+        font-size: 18px;
+        margin-bottom: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="home">
+      <h1 class="wel">Your Progress</h1>
+    </div>
+    <div class="back">
+      <a class="hi" href="/home"
+        ><i class="fa-solid fa-circle-arrow-left"></i
+      ></a>
+    </div>
+    <div class="container">
+      {% for course in courses %}
+      <div class="course">
+        <div
+          class="course-title"
+          style="font-family: Verdana, Geneva, Tahoma, sans-serif"
+        >
+          <strong>{{ course.title }}</strong>
+        </div>
+        <div class="progress-container">
+          <div class="progress-bar">
+            <div class="progress-bar-fill">{{ course.progress }}%</div>
+          </div>
+        </div>
+        <a href="/learn" target="_blank"><button>My Learning</button></a>
+      </div>
+      {% endfor %}
+    </div>
+  </body>
+</html>
